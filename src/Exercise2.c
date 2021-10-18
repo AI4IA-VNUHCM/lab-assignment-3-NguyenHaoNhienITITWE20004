@@ -11,7 +11,6 @@ Ex:
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 void Ex2(int arr[], int n){
 	//Your codes here
 for (int i = 0; i < n - 1; i++)
