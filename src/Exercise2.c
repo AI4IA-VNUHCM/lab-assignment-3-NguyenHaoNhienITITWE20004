@@ -14,17 +14,31 @@ Ex:
 
 void Ex2(int arr[], int n){
 	//Your codes here
-	int i,j;
-	for(i=0;i<n-1;i++){
-      for(j=n-1;j>i;j--){
-		if (arr[j]>arr[j-1]){
-			int a = arr[j];
-			arr[j]=arr[j-1];
-			arr[j-1]= a;
+for (int i = 0; i < n - 1; i++)
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[i] % 2 == 0 && arr[j] % 2 == 0)
+			{
+				if (arr[i] < arr[j])
+				{
+					int t = arr[i];
+					arr[i] = arr[j];
+					arr[j] = t;
+				}
+			}
+			if (arr[i] % 2 != 0 && arr[j] % 2 != 0)
+
+			{
+				if (arr[i] > arr[j])
+				{
+					int t = arr[i];
+					arr[i] = arr[j];
+					arr[j] = t;
+				}
+			}
 		}
-	}
-	}
-}
+	for (int i = 0; i < n; i++)
+		printf("%d ", arr[i]);
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
