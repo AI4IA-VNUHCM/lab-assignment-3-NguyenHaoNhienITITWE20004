@@ -6,14 +6,22 @@ ______________________________________
 | Output: 2 4 6 9 8 -3 -7 -2         |
 |____________________________________|
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 void Ex5(int arr[], int n){
 	//Your codes here
+	int t = 0, p[n];
+	for(int i = 0; i < n; i++){
+		if(arr[i] > 0) printf("%d ", arr[i]);
+		else{
+			p[t] = arr[i];
+			t++;
+		}
+	}
 	
+	for(int i = 0; i < t; i++) printf("%d ", p[i]);
 }
 
 int main(int argc, char *argv[]) {
