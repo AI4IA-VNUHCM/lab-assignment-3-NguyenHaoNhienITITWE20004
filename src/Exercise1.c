@@ -12,33 +12,25 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 
-void Ex1(int arr[], int n) {
-	//your code here
-	int kt = 1;
-	for (int i = 0, j = n - 1; i <= (n - 1) % 2 && j >=(n - 1) % 2 ; i++,j--)
+void Ex1(int arr[], int n){
+	//Your codes here
+	int mid = n / 2;
+	int i = 0, j = n - 1;
+	int symmetric = 1;
+
+	while (i < mid && j >= mid)
+	{
 		if (arr[i] != arr[j])
 		{
-			kt = 0;
+			symmetric = 0;
+			printf("asymmetric");
 			break;
 		}
-	if (kt == 1)
-		printf("symmetric");
-	else
-		printf("asymmetric");
-
-}
-
-int main(int argc, char* argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	argc--;
-	int testcase[argc], i;
-	for (i = 0; i < argc; i++) {
-		testcase[i] = atoi(argv[i + 1]);
+		i++;
+		j--;
 	}
-
-	Ex1(testcase, argc);
-
-	return 0;
+	if (symmetric)
+		printf("symmetric");
 }
 
 int main(int argc, char *argv[]) {
