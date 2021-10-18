@@ -39,7 +39,7 @@ for (int i = 0; i < n - 1; i++)
 		}
 	for (int i = 0; i < n; i++)
 		printf("%d ", arr[i]);
-
+}
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
